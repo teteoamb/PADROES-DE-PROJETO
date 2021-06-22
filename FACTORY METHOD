@@ -1,5 +1,19 @@
 package factory;
 
+INTERFACE
+
+public interface hp{
+String sethp();
+}
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------
 public class hpfabric {
 public static hp setHp(opcao Opcao) {       //AQUI SE CRIA UM METODO DE FABRICA RESPONSAVLE PELA CRIAÇÃO DO OBJETO: PRIMEIRO CHAMAMOS A INTERFACE HP
 	if(Opcao.equals(opcao.EXEMPLO1)) {		//DEPIS SE CRIA O METODO SETHP E DENTRO DELE CHAMAMOS O ENUMERADO DAS VARIAVEIS "opcao", e cria se o parametro "Opcao";
