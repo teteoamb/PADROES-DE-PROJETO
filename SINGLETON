@@ -1,0 +1,15 @@
+package singleton;
+
+public class singleton {
+	public static class perdadehp{   //se cria a classe do metodo que sera instanciado
+	private static perdadehp instancia; // cria-se o objeto onde ficara instanciado o metodo
+	public static perdadehp obterinstancia(){  //metodo para obtenção da instancia
+		if(instancia == null) {				// so é executado se a instancia já nao tiver nenhum valor atribuido	
+			private perdadehp() { }				
+			{instancia = new perdadehp();  // se cria o unico objeto da classe perdadehp: instancia, para que nao haja
+			}   //outra instancia desse objeto
+			return instancia;
+			}
+			}
+}
+}
