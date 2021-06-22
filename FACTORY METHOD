@@ -1,0 +1,34 @@
+package factory;
+
+public class hpfabric {
+public static hp setHp(opcao Opcao) {       //AQUI SE CRIA UM METODO DE FABRICA RESPONSAVLE PELA CRIAÇÃO DO OBJETO: PRIMEIRO CHAMAMOS A INTERFACE HP
+	if(Opcao.equals(opcao.EXEMPLO1)) {		//DEPIS SE CRIA O METODO SETHP E DENTRO DELE CHAMAMOS O ENUMERADO DAS VARIAVEIS "opcao", e cria se o parametro "Opcao";
+		return new critico(); 				// CONDICIONANTE PARA SER CHAMADO APENAS EM CASO DE QUE SE QUEIRA CRIAR ESSE OJETO EM SEGUIDA DAMOS O VALOR DO ENUM "EXEMPLO1" PARA A VARIAAVEL "Opcao"
+	}										// RETORNA PARA A INTERFACE EXECUTAR O METODO DA CLASSE "CRITICO";
+}
+}
+//fabrica do objeto.
+
+-------------------------------------------------------------------------------------------------------
+//ENUM
+
+public enum opcao {
+EXEMPLO1
+}
+
+-----------------------------------------------------------------
+public class critico implements hp{   //a receita do objeto se implementao a interface
+public String getHp() {
+	return "exemplo1";         //se executa o metódo da interface na receita "critico"
+}
+}
+//definiçao das receitas dos objetos
+------------------------------------------------------------------------------------------------------------------------
+public class maintest {
+public static void main(String[] args){        //declaração padrao para realizar o teste
+	hp HP = hpfabric.sethp(opcao.EXEMPLO1);   //primeiro chamamos a interfacehp e criamos a variavel "HP" que equivale ao metodo "sethp" da classe "hp fabric"
+	System.out.print(HP.getHp())				//sendo executado tendo como parametro a variavel "EXEMPLO1" do enum "opcao".
+}												// por fim para imprimir as caracteristicas do objeto se acessa a interface HP e o metodo gethp() que chega ate o return da classe "critico()'
+
+}
+//teste da fabricação do objeto
